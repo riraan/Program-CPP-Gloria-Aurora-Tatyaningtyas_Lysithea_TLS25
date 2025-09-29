@@ -26,7 +26,6 @@ int main() {
             char huruf = kata[0];
             int ascii = huruf;
 
-            // hapus vokal
             string sisa = "";
             for (int i = 0; i < kata.length(); i++) {
                 char c = kata[i];
@@ -36,13 +35,11 @@ int main() {
                 }
             }
 
-            // balik string pakai for loop
             string reverse = "";
             for (int i = sisa.length()-1; i >= 0; i--) {
                 reverse += sisa[i];
             }
 
-            // sisipkan ascii di tengah
             stringstream ss;
             ss << ascii;
             string kode = ss.str();
@@ -83,7 +80,7 @@ int main() {
             }
 			if (gabung_lagi.length() > 0) {
 			    if (gabung_lagi[0] != huruf) {
-    			    gabung_lagi = huruf + gabung_lagi;  // tambahkan huruf di depan
+    			    gabung_lagi = huruf + gabung_lagi;  
   				}
 			} else {
  			   gabung_lagi = huruf + gabung_lagi;
